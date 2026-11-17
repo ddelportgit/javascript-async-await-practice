@@ -95,7 +95,9 @@ async function getPosts() {
 
     const posts = await response.json();
 
-    console.log(posts);
+    console.log(posts[0].title);
+    console.log(posts[0].body);
+    console.log(posts.length);
   } catch (error) {
     console.log(error.message);
   }
