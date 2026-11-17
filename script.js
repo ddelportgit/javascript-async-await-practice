@@ -1,3 +1,6 @@
+const statusElement = document.querySelector("#status");
+const postsContainer = document.querySelector("#posts-container");
+
 // Task 1
 
 async function getUser() {
