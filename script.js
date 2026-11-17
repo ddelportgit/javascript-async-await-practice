@@ -95,9 +95,9 @@ async function getPosts() {
 
     const posts = await response.json();
 
-    console.log(posts[0].title);
-    console.log(posts[0].body);
-    console.log(posts.length);
+    posts.slice(0, 5).forEach((post) => {
+      console.log(post.title);
+    });
   } catch (error) {
     console.log(error.message);
   }
