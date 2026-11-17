@@ -42,9 +42,43 @@ async function loadAllData() {
     postsPromise,
     commentsPromise,
   ]);
+
   console.log(users);
   console.log(posts);
   console.log(comments);
 }
 
 loadAllData();
+
+// Task 5
+
+function fetchUsers() {
+  return Promise.resolve(["Alex", "Sarah"]);
+}
+
+function fetchPosts() {
+  return Promise.resolve(["Post 1", "Post 2"]);
+}
+
+function fetchComments() {
+  return Promise.resolve(["Comment 1", "Comment 2"]);
+}
+
+async function loadDashboard() {
+  try {
+    const [users, posts, comments] = await Promise.all([
+      fetchUsers(),
+      fetchPosts(),
+      fetchComments(),
+    ]);
+
+    console.log(users);
+    console.log(posts);
+    console.log(comments);
+    console.log("Dashboard loaded successfully");
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+loadDashboard();
