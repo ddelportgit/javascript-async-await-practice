@@ -91,6 +91,8 @@ loadDashboard();
 async function getPosts() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    statusElement.textContent = "Loading posts...";
+    postsContainer.innerHTML = "";
 
     if (!response.ok) {
       throw new Error("Failed to fetch posts");
