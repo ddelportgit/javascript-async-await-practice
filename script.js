@@ -108,6 +108,8 @@ async function getPosts() {
 
       postsContainer.appendChild(postElement);
     });
+
+    statusElement.textContent = "Posts loaded successfully!";
   } catch (error) {
     console.log(error.message);
   }
