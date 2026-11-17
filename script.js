@@ -87,15 +87,15 @@ loadDashboard();
 
 async function getPosts() {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
 
     if (!response.ok) {
       throw new Error("Failed to fetch posts");
     }
 
-    const users = await response.json();
+    const posts = await response.json();
 
-    console.log(users);
+    console.log(posts);
   } catch (error) {
     console.log(error.message);
   }
