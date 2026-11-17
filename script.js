@@ -102,7 +102,11 @@ async function getPosts() {
     const posts = await response.json();
 
     posts.slice(0, 5).forEach((post, index) => {
-      console.log(`Post ${index + 1}: ${post.title}`);
+      const postElement = document.createElement("div");
+
+      postElement.textContent = `Post ${index + 1}: ${post.title}`;
+
+      postsContainer.appendChild(postElement);
     });
   } catch (error) {
     console.log(error.message);
