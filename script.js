@@ -111,7 +111,7 @@ async function getPosts() {
 
     statusElement.textContent = "Posts loaded successfully!";
   } catch (error) {
-    console.log(error.message);
+    statusElement.textContent = error.message;
   }
 }
 
