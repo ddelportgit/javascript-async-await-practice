@@ -95,8 +95,8 @@ async function getPosts() {
 
     const posts = await response.json();
 
-    posts.slice(0, 5).forEach((post) => {
-      console.log(post.title);
+    posts.slice(0, 5).forEach((post, index) => {
+      console.log(`Post ${index + 1}: ${post.title}`);
     });
   } catch (error) {
     console.log(error.message);
