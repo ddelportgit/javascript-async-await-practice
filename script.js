@@ -16,3 +16,16 @@ async function getUserData() {
 }
 
 getUserData();
+
+// Task 3
+
+async function getData() {
+  try {
+    const data = await Promise.reject("Failed to fetch data");
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getData();
