@@ -29,3 +29,22 @@ async function getData() {
 }
 
 getData();
+
+// Task 4
+
+const usersPromise = Promise.resolve("Users loaded");
+const postsPromise = Promise.resolve("Posts loaded");
+const commentsPromise = Promise.resolve("Comments loaded");
+
+async function loadAllData() {
+  const [users, posts, comments] = await Promise.all([
+    usersPromise,
+    postsPromise,
+    commentsPromise,
+  ]);
+  console.log(users);
+  console.log(posts);
+  console.log(comments);
+}
+
+loadAllData();
